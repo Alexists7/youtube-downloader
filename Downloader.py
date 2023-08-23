@@ -1,7 +1,13 @@
 from pytube import YouTube
 import os
 
+if not os.path.exists("results"):
+    os.makedirs("results")
+
 def Download(link, type):
+    if not os.path.exists("results"):
+        os.makedirs("results")
+
     yObject = YouTube(link)
     if type == "MP4":
         yObject = yObject.streams.get_highest_resolution()
