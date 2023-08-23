@@ -1,9 +1,6 @@
 from pytube import YouTube
 import os
 
-if not os.path.exists("results"):
-    os.makedirs("results")
-
 def Download(link, type):
     if not os.path.exists("results"):
         os.makedirs("results")
